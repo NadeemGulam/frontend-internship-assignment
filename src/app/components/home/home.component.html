@@ -1,3 +1,28 @@
+<!-- <div class="header">
+  <div class="tw-text-24-px tw-font-600">Open Books Library</div>
+  <div class="search-button">
+    <mat-icon class="tw-mt-16-px" aria-label="Search Icon">search</mat-icon>
+    <input
+      [formControl]="bookSearch"
+      name="searchKey"
+      type="text"
+      placeholder="Search Books"
+      class="tw-border-0 tw-bg-inherit"
+    >
+  </div>
+</div>
+
+<div class="tw-flex tw-flex-row tw-m-24-px">
+  <section class="trending-subjects">
+    <div class="tw-font-600 tw-text-24-px">Trending Subjects</div>
+    <ul class="tw-list-none tw-pl-0">
+      <li class="tw-text-16-px tw-cursor-pointer tw-p-12-px" *ngFor="let subject of trendingSubjects" routerLink="/trending-subject/{{ subject.name }}">
+        {{ subject.name }}
+      </li>
+    </ul>
+  </section>
+</div> -->
+
 <div class="header">
   <div class="tw-text-24-px tw-font-600">Open Books Library</div>
   <div class="search-button">
@@ -11,6 +36,7 @@
     >
   </div>
 </div>
+
 <div class="tw-flex tw-flex-row tw-m-24-px">
   <section class="trending-subjects">
     <div class="tw-font-600 tw-text-24-px">Trending Subjects</div>
@@ -20,4 +46,29 @@
       </li>
     </ul>
   </section>
+
+
+  <div class="search-results tw-ml-24-px">
+    <div *ngIf="searchResults.length === 0">No results found.</div>
+    <mat-table *ngIf="searchResults.length > 0" mat-table [dataSource]="searchResults" class="mat-elevation-z8">
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef>Title</th>
+        <td mat-cell *matCellDef="let book">{{ book.title }}</td>
+      </ng-container>
+      <ng-container matColumnDef="author">
+        <th mat-header-cell *matHeaderCellDef>Author</th>
+        <td mat-cell *matCellDef="let book">{{ book.author_name?.join(', ') }}</td>
+      </ng-container>
+      <ng-container matColumnDef="published">
+        <th mat-header-cell *matHeaderCellDef>Published</th>
+        <td mat-cell *matCellDef="let book">{{ book.first_publish_year }}</td>
+      </ng-container>
+      <ng-container matColumnDef="isbn">
+        <th mat-header-cell *matHeaderCellDef>ISBN</th>
+        <td mat-cell *matCellDef="let book">{{ book.isbn?.[0] }}</td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let book; columns: displayedColumns;"></tr>
+    </mat-table>
+  </div>
 </div>
