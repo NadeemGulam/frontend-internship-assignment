@@ -29,3 +29,125 @@
   tw-rounded-4-px
   tw-shadow-lg
 }
+
+.border{
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+
+}
+.gradient{
+  background-image: linear-gradient(blue
+  , purple
+  );
+  padding: 2rem;
+  
+}
+.navArea{
+  box-shadow: 2px 5px 5px 1px rgba(0,0,0,0.1);
+-webkit-box-shadow: 2px 5px 5px 1px rgba(0,0,0,0.1);
+-moz-box-shadow: 2px 5px 5px 1px rgba(0,0,0,0.1);
+height: 80px;
+}
+
+.form-control{
+  border-radius: 1.375rem !important;
+  padding-left: 3rem;
+  width: 50%;
+}
+.search{
+  position: relative;
+  top: 9px;
+  left: 30px;
+}
+.closeIcon{
+  position: relative;
+  top: 9px;
+  right: 25px;
+}
+.flexBox{
+  display: flex;
+  align-items: center;
+
+}
+li{
+  color: white;
+  list-style: none;
+
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: end;
+  .page-link {
+    border: 2px solid #bdbdbd;
+    border-radius: 10px !important;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #313131;
+    text-align: center;
+    margin: 2px 5px;
+    width: 40px;
+  }
+  .page-link.active {
+    background: #dc3545;
+    color: #fff;
+    border: 2px solid #dc3545;
+    box-shadow: 0px 7px 16px rgba(0, 0, 0, 0.14);
+    border-radius: 10px !important;
+  }
+}
+.card-table {
+  margin: 30px 0px;
+  background: #ffffff;
+  border: 0.5px solid #c4cdd5;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.05);
+  // box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  .table {
+    margin: 0px;
+  }
+  thead {
+    background-color: #f8f8f8;
+    th {
+      color: #1b212d;
+      font-size: 14px;
+      font-weight: 600;
+      vertical-align: middle;
+      padding: 10px 15px !important;
+
+      .btn {
+        color: #1b212d;
+        font-size: 14px;
+        font-weight: 600;
+        white-space: nowrap;
+        border: 0px;
+      }
+      i {
+        color: #acb5c1;
+      }
+      i.active {
+        color: #333;
+      }
+      img {
+        width: 20px;
+      }
+    }
+  }
+  td {
+    color: #1b212d;
+    font-size: 14px;
+    font-weight: 600;
+    vertical-align: middle;
+    padding: 10px 5px 10px 25px !important;
+  }
+}
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+}
+

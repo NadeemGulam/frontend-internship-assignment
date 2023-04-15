@@ -22,8 +22,10 @@
     "@fortawesome/angular-fontawesome": "^0.12.1",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@material-icons/font": "^1.0.36",
+    "postcss-loader": "^7.2.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "underscore": "^1.13.1",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
@@ -49,6 +51,7 @@
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "@types/jest": "^29.4.0",
     "@types/node": "16.11.7",
+    "@types/underscore": "^1.11.4",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
     "autoprefixer": "^10.4.14",

@@ -10,6 +10,11 @@ const routes: Routes = [
     title: 'Open Books Library',
   },
   {
+    path: 'home',
+    component: HomeComponent,
+    title: 'Open Books Library',
+  },
+  {
     path: 'trending-subject/:name',
     component: TrendingSubjectsComponent,
     title: 'Trending Subjects',

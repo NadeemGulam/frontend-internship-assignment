@@ -1,5 +1,8 @@
 <div class="tw-m-24-px">
-  <div class="tw-mb-24-px tw-text-24-px"> Top {{ booksList.length }} book{{ booksList.length > 1 ? "s" : "" }} on {{ subjectName }}</div>
+  <div class="tw-mb-24-px tw-text-24-px">
+    Top {{ booksList.length }} book{{ booksList.length > 1 ? 's' : '' }} on
+    {{ subjectName }}
+  </div>
 
   <ng-container>
     <table class="table-view">
@@ -13,14 +16,27 @@
       <tbody class="table-body">
         <tr *ngFor="let book of booksList" class="row-data">
           <td>
-            <a class="tw-no-underline" href="https://openlibrary.org{{ book.key }}" target="_blank">{{ book.title }}</a>
+            <a
+              class="tw-no-underline"
+              href="https://openlibrary.org{{ book.key }}"
+              target="_blank"
+              >{{ book.title }}</a
+            >
           </td>
           <td>
-            {{ book.authors.length > 0 ? book.authors[0].name : "Unknown" }}
+            {{ book.authors.length > 0 ? book.authors[0].name : 'Unknown' }}
           </td>
           <td>{{ book.first_publish_year }}</td>
         </tr>
       </tbody>
     </table>
   </ng-container>
+
+  <div class="row mt-4">
+    <div class="container">
+      <button routerLink="/home" class="btn btn-primary p-3">
+        <i class="fa-solid fa-chevron-left"></i> &nbsp; Go Back to Home Screen
+      </button>
+    </div>
+  </div>
 </div>
